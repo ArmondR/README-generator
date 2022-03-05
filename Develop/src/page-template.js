@@ -1,7 +1,6 @@
-
 // creates screenshot section
 const generateScreenshot = screenShot => {
-  if(!screenShot) {
+  if (!screenShot) {
     return '';
   }
 
@@ -16,56 +15,57 @@ const generateScreenshot = screenShot => {
 module.exports = templateData => {
   console.log(templateData);
 
-    return `
-      # ${templateData.title}  
-      
-      ![License](https://img.shields.io/badge/License-${templateData.license}-blue)
+  return `
+# ${templateData.title}  
 
-      ## Description
+![License](https://img.shields.io/badge/License-${templateData.license}-blue)
 
-      ${templateData.description}
+## Description
 
-      ## Table of Contents
+${templateData.description}
 
-      * [Installation](#installation)
-      * [Usage](#usage)
-      * [License](#license)
-      * [Contributors](#contributors)
-      * [Tests](#tests)
-      * [Questions](#questions)
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributors](#contributors)
+* [Tests](#tests)
+* [Credits](#credits)
+* [Questions](#questions)
 
 
-      ## Installation
+## Installation
 
-      ${templateData.installation}
+${templateData.installation}
 
-      ## Usage
+## Usage
 
-      ${templateData.usage}
+${templateData.usage}
 
-      ${generateScreenshot(templateData.screenshot)}
+${generateScreenshot(templateData.screenshot)}
 
-      ## License
+## License
 
-      This project is licensed under ${templateData.license}.
+This project is licensed under ${templateData.license}.
 
-      ## Contributing
+## Contributing
 
-      ${templateData.contributors}
+${templateData.contributors}
 
-      ## Tests
+## Tests
 
-      ${templateData.tests}
+${templateData.tests}
 
-      ## Questions
+## Credits
 
-      If you have any questions regarding this project, you can reach me via email at ${templateData.email}. 
-      If you would like to view more of my projects, you can access them here at: https://github.com/${templateData.github}.
+${templateData.credits}
+
+## Questions
+
+If you have any questions regarding this project, you can reach me via email at ${templateData.email}. 
+If you would like to view more of my projects, you can access them here at: https://github.com/${templateData.github}.
 
 
     `;
 };
-
-
-
-//module.exports = generateREADME;
