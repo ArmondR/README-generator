@@ -1,8 +1,25 @@
+
+// creates screenshot section
+const generateScreenshot = screenShot => {
+  if(!screenShot) {
+    return '';
+  }
+
+  return `
+## Screenshot
+
+![](${screenShot})
+  `;
+};
+
+
 module.exports = templateData => {
   console.log(templateData);
 
     return `
-      # ${templateData.title}  ![License](https://img.shields.io/badge/License-${templateData.license}-blue)
+      # ${templateData.title}  
+      
+      ![License](https://img.shields.io/badge/License-${templateData.license}-blue)
 
       ## Description
 
@@ -26,6 +43,8 @@ module.exports = templateData => {
 
       ${templateData.usage}
 
+      ${generateScreenshot(templateData.screenshot)}
+
       ## License
 
       This project is licensed under ${templateData.license}.
@@ -46,5 +65,7 @@ module.exports = templateData => {
 
     `;
 };
+
+
 
 //module.exports = generateREADME;
