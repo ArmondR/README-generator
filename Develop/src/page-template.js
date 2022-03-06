@@ -18,7 +18,7 @@ module.exports = templateData => {
   return `
 # ${templateData.title}  
 
-![License](https://img.shields.io/badge/License-${templateData.license}-blue)
+[![License](https://img.shields.io/badge/License-${templateData.license}-blue)](https://www.opensource.org/licenses/${templateData.license})
 
 ## Description
 

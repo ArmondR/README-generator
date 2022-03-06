@@ -83,7 +83,7 @@ const questions = () => {
       type: 'list',
       name: 'license',
       message: 'Please select a license.',
-      choices: ['MIT', 'GNU', 'Mozilla Public 2.0', 'Apache 2.0', 'Boost Software 1.0'],
+      choices: ['MIT', 'GPL-3.0', 'LGPL-3.0', 'AGPL-3.0', 'MPL-2.0', 'Apache-2.0', 'BSL-1.0', 'None'],
       default: ['MIT'],
       validate: licenseInput => {
         if (licenseInput) {
@@ -101,7 +101,7 @@ const questions = () => {
     },
     {
       type: 'input',
-      name: 'Contributors',
+      name: 'contributors',
       message: 'Please provide information/guidelines on where others can contribute and assist with this project.'
     },
     {
